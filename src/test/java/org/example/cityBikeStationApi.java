@@ -37,7 +37,6 @@ public class cityBikeStationApi {
                 .get();
         long responseInstallDate = response.jsonPath().getLong("network.stations.extra.installDate[0]");
         Assert.assertEquals(responseInstallDate, installDate.longValue(), "Install date is not correct");
-        System.out.println("1");
     }
 
     @Then("I should be able to return the correct number of empty slots {int}")
